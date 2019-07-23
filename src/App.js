@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          SHUSH IS LIEF
+          Arthur en Harut
         </p>
       </header>
     </div>
