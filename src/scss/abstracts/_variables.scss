@@ -1,0 +1,36 @@
+// FONT
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+$border-radius: 5px;
+$border-radius-extra: 50px;
+$main: #3fa052;
+
+$main-1: #000000;
+$main-2: #545454;
+$main-3: #000000;
+$main-4: #3fa052;
+$main-dark: #000000;
+
+$second: #414141;
+$accent: #006894;
+$satin: #f0f0f0;
+$satin-t: rgba(0, 0, 0, 0.31);
+$white: #fff;
+$black: #000;
+$red: rgb(192, 5, 5);
+$green: rgb(50, 206, 7);
+$shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+$dashed-border: 3px dashed $main;
+$transition: all 0.3s;
+$header_height: 50px;
+$header_color: $white;
+$header-second: $main;
+$header_text_color: $second;
+$left-nav-width: 70px;
+$content-width: calc(100vw - 72px);

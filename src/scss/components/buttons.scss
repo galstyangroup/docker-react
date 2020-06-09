@@ -1,0 +1,46 @@
+button {
+    box-shadow: $shadow;
+    border-radius: $border-radius-extra;
+    border: none;
+    cursor: pointer !important;
+    margin: 0.5rem 0rem;
+    color:$second;
+    background-color: $white;
+    padding: 0.5rem 1rem;
+    font-size: $default-font-size;
+    &.btn {
+        width: 100%;
+        padding: 1rem 2rem;
+        &__danger {
+            background: $red;
+            color:$white;
+        }
+        &__success {
+            background: $green;
+            color:$white;
+        }
+        &__default {
+            background-color: $main;
+            color:$white;
+            &:hover {
+                background-color: $white;
+                color:$main;
+            }
+        }
+    }
+    &:hover {
+        background: $main;
+        color: $white;
+    }
+    transition: $transition;
+}
+
+lable {
+    padding: 0.3rem 1rem;
+    background:$satin;
+    font-size: 1.2rem;
+    color:$main-dark;
+    margin-right: 0.5rem;
+}
+
+

@@ -1,0 +1,150 @@
+.u-center-text { text-align: center !important; }
+
+.u-margin-bottom-small { margin-bottom: 1.5rem !important; }
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+}
+
+.u-margin-bottom-big { 
+    margin-bottom: 8rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+}
+
+.u-margin-top-big { margin-top: 8rem !important; }
+.u-margin-top-huge { margin-top: 10rem !important; }
+
+.search {
+    max-width: 10rem;
+    margin: 1rem 0rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-white {
+    color:$white;
+}
+
+.divider {
+    margin: 0rem 2rem;
+}
+
+.search {
+    max-width: 10rem;
+    margin: 1rem 0rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* The container must be positioned relative: */
+.bg-img-wr {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    text-align: right;
+    right: 0;
+    z-index: -1;
+    .bg-image {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 90vw;
+        height: auto;
+        vertical-align: middle;
+    }
+}
+
+.error {
+    position: fixed;
+    width: 250px;
+    background: $red;
+    right: 5%;
+    border-radius: $border-radius;
+    color: #fff;
+    bottom: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: all 1s;
+    box-shadow: $shadow;
+}
+
+.pagination {
+    display: block;
+    margin-top: 1rem;
+    input {
+        max-width: 60px;
+        text-align: center;
+    }
+
+}
+
+/* Custom Scrollbar */
+
+body, html {
+    scrollbar-face-color: ThreeDFace !important;
+    scrollbar-shadow-color: ThreeDDarkShadow !important;
+    scrollbar-highlight-color: ThreeDHighlight !important;
+    scrollbar-3dlight-color: ThreeDLightShadow !important;
+    scrollbar-darkshadow-color: ThreeDDarkShadow !important;
+    scrollbar-track-color: Scrollbar !important;
+    scrollbar-arrow-color: ButtonText !important;
+  }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: $white;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $main;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $main;
+}
+
+
+@mixin gradient-background {
+    background-image: linear-gradient($main, darken($main-4, 8%));
+}
+@mixin default-button {
+    border-radius: $border-radius-extra;
+    padding: 1rem 2rem;
+    background: white;
+    color:$main;
+    &:hover {
+        background: $main;
+        color: $white;
+    }
+    transition: $transition;
+}

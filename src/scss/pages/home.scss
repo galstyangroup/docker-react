@@ -1,0 +1,422 @@
+@mixin hover {
+  background: $white;
+  color: $main;
+  transition: $transition;
+}
+
+section {
+  padding: 5rem;
+}
+
+span {
+  color: $main-2;
+}
+
+.home {
+  &__header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 25rem;
+    border-bottom-right-radius: 15rem;
+    background: none;
+    box-shadow: none;
+    background: $header-color;
+    box-shadow: $shadow;
+  }
+
+  &__nav {
+    display: flex;
+    padding: 0rem 5rem;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  &__nav_item {
+    img {
+      width: 100px;
+    }
+
+    flex:0 0 auto;
+    z-index: 3;
+    display: flex;
+    align-content: center;
+
+    a {
+      flex: 0 0 auto;
+
+      text-decoration: none;
+      height: 100%;
+      color: $second;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      &:hover {
+        transition: $transition;
+        color: $main-3;
+      }
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__menu {
+    flex: 1 0 auto;
+    padding: 0rem 2rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__try {
+    border: 2px solid $main;
+    padding: 0.5rem 5rem !important;
+    border-radius: $border-radius-extra;
+    color: $main !important;
+
+    &:hover {
+      background: $main;
+      color: $white !important;
+    }
+  }
+
+  &__link {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: $border-radius-extra;
+    margin-right: 2rem;
+
+    &:hover {
+      @include hover
+    }
+
+    &--fill {
+      background: $white;
+      color: $main;
+    }
+  }
+
+}
+
+.hero {
+  background-color: $main-2;
+  @include gradient-background;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10rem;
+  border-bottom-left-radius: 25rem;
+  border-bottom-right-radius: 50rem;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  
+
+  &__info {
+    max-width: 65rem;
+    flex: 1 0 60%;
+    z-index: 1;
+  }
+
+  &__image {
+    flex: 0 0 49.4%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    img {
+      margin-top: 10rem;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 5rem;
+  }
+
+  &__desc {
+    color: #fff;
+    font-size: 2.5rem;
+
+    z-index: 1;
+  }
+
+  &__buttons {
+    @include respond(tab-port) {
+      display: flex;
+      flex-wrap: wrap;
+      a {
+        flex: 1 0 49%;
+        min-width: 300px;
+        text-align: center;
+        margin-top: 2rem;
+      }
+    }
+    margin-top: 5rem;
+
+    a {
+      font-size: 2rem;
+      padding: 1.5rem 5rem;
+
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  span {
+    color: $main-3;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 5rem;
+    border-bottom-right-radius: 10rem;
+
+    &__info {
+      margin-top: 10rem;
+      flex: 1 0 auto;
+    }
+    &__image {
+      flex: 1 0 auto;
+      img {
+        width: 100%;
+        margin-top: 0rem;
+      }
+    }
+  }
+}
+
+
+.about {
+  max-width: 100vw;
+  background: $white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 15rem;
+  }
+  &__info {
+    padding: 2rem;
+    flex: 1 0 60%;
+    @include respond(tab-port) {
+      text-align: center;
+    }
+  }
+
+  &__image {
+    flex: 0 0 40%;
+    overflow: hidden;
+    padding: 0rem 0rem;
+
+    img {
+      width: 100%;
+
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $main;
+  background-image: linear-gradient($main-2, darken($main-4, 8%));
+  &__info {
+    color: $white;
+    display: flex;
+    padding: 5rem;
+    min-height: 5rem;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    @include respond(tab-port) {
+      flex-direction: column;
+      justify-content: center;
+      >* {
+        margin-top: 2rem;
+        text-align: center;
+      }
+    }
+
+    &__cta {
+      flex: 0 0 30%;
+      text-align: center;
+      @include respond(tab-port) {
+        flex: 1 0 auto;
+      }
+
+      a {
+        margin: 2rem 0rem;
+        padding: 2rem;
+        border-radius: $border-radius-extra;
+        background: $main-3;
+        text-transform: uppercase;
+        display: block;
+        color: $black;
+        box-shadow: $shadow;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 700;
+
+        &:hover {
+          @include hover
+        }
+      }
+    }
+
+    h3,
+    h2 {
+      color: $white;
+      text-transform: uppercase;
+      align-items: center;
+    }
+
+  }
+
+  &__copyr {
+    align-self: center;
+
+    p {
+      color: $white;
+      font-size: 1.3rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+  }
+}
+
+.features {
+  &__title {
+    text-align: center;
+    @include gradient-background;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    @include respond(tab-port) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+    @include respond(tab-port) {
+      text-align: center;
+    }
+  }
+
+  &__column {
+    padding: 2rem;
+    flex: 0 0 33.33%;
+  }
+}
+
+.plans {
+  &__title {
+    text-align: center;
+    @include gradient-background;
+  }
+  
+
+  &__plan {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 5rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: stretch;
+    @include respond(tab-port) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__items {
+      padding: 5rem;
+      box-shadow: 0px 18px 99px #0F399F14;
+      
+      border-radius: $border-radius;
+      flex: 0 0 30%;
+      list-style: none;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.5rem;
+      &:not(:last-child) {
+        margin-right: 2rem;
+        @include respond(tab-port) {
+          margin-right: 0;
+        }
+      }
+
+      @include respond(tab-port) {
+        margin-top: 2rem;
+      }
+
+      &:not(:nth-child(even)) {
+        @include gradient-background;
+        color: white;
+      }
+
+      &:nth-child(even) {
+        border: 5px solid $main;
+        z-index: 1;
+        background: $white;
+      }
+
+      &__name {
+        font-size: 4rem;
+      }
+
+      &__price {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      &__button {
+        display: flex;
+        justify-content: center;
+        align-content: stretch;
+        height: 100%;
+        margin-top: 5rem;
+
+        a {
+          align-self: flex-end;
+          @include default-button;
+          text-decoration: none;
+          font-size: 2rem;
+          box-shadow: $shadow;
+
+          @include respond(tab-port) {
+            padding: 2rem 5rem;
+          }
+
+          @include respond(big-desktop) {
+            padding: 2rem 5rem;
+          }
+        }
+
+      }
+    }
+  }
+}

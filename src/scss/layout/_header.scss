@@ -1,0 +1,112 @@
+header {
+    position: fixed;
+    top: 0;
+    background: $header_color;
+    box-shadow: $shadow;
+    z-index: 5;
+    
+
+    nav {
+        height: $header_height;
+        max-height: $header_height;
+        position: relative;
+        display: flex;
+        width: 100vw;
+        color: $header_text_color;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 1rem;
+        
+
+        .org {
+            flex: 1 auto;
+            margin-left: 2rem;
+            height: $header_height;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            border-left: 1px solid $header_text_color;
+            padding: 0rem 2rem;
+            a {
+                text-decoration: none;
+                color:$header_text_color;
+                font-size: $default-font-size;
+            }
+        }
+
+        .verify-email {
+            height: $header_height;
+            display: flex;
+            align-items: center;
+            margin: 0rem 2rem;
+            background: $red;
+            padding: 1rem;
+
+            a.danger {
+                color: $white;
+            }
+        }
+
+
+        .user-menu {
+            color: $header_text_color;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            p {
+                color: $header_text_color;
+                margin-right: 2rem;
+            }
+            &:hover {
+                background: $satin-t;
+                
+            }
+            .user-icon {
+                background: $header-second;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 30px;
+                min-width: 30px;
+                color: $header_color;
+                font-size: 1rem;
+
+                &:hover {
+                    cursor: pointer;
+                    background: $second;
+                    transition: $transition;
+                }
+            }
+        }
+
+        .user-menu-dropdown {
+            height: $header_height;
+            display: flex;
+            position: relative;
+            .dropdown-content {
+                top: #{$header_height};
+                width: 15rem;
+                right: 0rem;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                
+                a {
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+        .brand {
+            align-self: stretch;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .logo {
+                width: 150px;
+                height: auto;
+            }
+        }
+        
+    }
+}

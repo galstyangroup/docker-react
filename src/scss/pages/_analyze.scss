@@ -1,0 +1,175 @@
+.anlz {
+    &__wrp {
+        margin-top: 2rem;
+        display: flex;
+
+    }
+
+    &__menu__active {
+        margin-left: 20rem;
+        width: 100%;
+
+    }
+
+    &__menu {
+        max-width: 20rem;
+        min-width: 20rem;
+        max-height: calc(100vh - #{$header-height});
+        margin-top: $header-height;
+        top: 0;
+        left:calc(#{$left-nav-width} + 1px);
+        height: 100%;
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: scroll;
+        box-shadow: $shadow;
+        background: $white;
+
+        a {
+            padding: 0.5rem;
+            cursor: pointer;
+            display: block;
+            width: 50rem;
+
+            &:hover,
+            &.active {
+                background: $main;
+                color: white;
+            }
+        }
+    }
+
+    &__info {
+        padding: 2rem 0rem;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        min-height: 15rem;
+
+        &--title {
+            svg {
+                color: $main;
+                cursor: pointer;
+            }
+
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__logo {
+        flex: 1 0 auto;
+        text-align: right;
+
+        img {
+            max-height: 10rem;
+            width: auto;
+        }
+
+        // position: absolute;
+        // right:0;
+        // top:0;
+    }
+
+    &__desc {
+        max-width: 80rem;
+    }
+
+    &__report {
+        margin-bottom: 5rem;
+    }
+    &__metrics {
+        &__title {
+            margin:2rem 0rem;
+        }
+    }
+}
+
+#stock-data {
+    flex: 1 auto;
+    min-width: calc(100% - 22rem);
+    padding: 0rem 1rem;
+}
+
+
+
+.finc__balance {
+    tbody {
+        vertical-align: top;
+
+        >tr {
+            &:hover {
+                background: none;
+            }
+        }
+        table {
+            margin-top: 2rem;
+            tr td {
+                padding: 0.5rem;
+                max-width: 15rem;
+                min-width: 15rem;
+            }
+            tr td:nth-child(2) {
+                text-align: right;
+                max-width: 10rem;
+                min-width: 10rem;
+            }
+           
+        }
+    }
+    tfoot {
+        tr td {
+            text-align: right;
+            font-weight: bold;
+            background: $satin;
+        }
+    }
+
+    font-size: 1.3rem;
+    margin:2rem 0rem;
+}
+
+.income {
+    padding: 0;
+    display: flex;
+    box-shadow: $shadow;
+    margin: 2rem 0rem;
+    border-radius: $border-radius;
+
+    &__group {
+        flex: 0 1 20%;
+        border: 1px solid $white;
+
+        &--info {
+            flex: 0 1 30%;
+
+            .income__row {
+                text-align: left;
+            }
+        }
+
+    }
+
+    &__row {
+        text-align: right;
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+
+        &--rpd {
+            border-radius: $border-radius;
+            padding: 2rem 1rem;
+            background: $main;
+            color: $white;
+        }
+
+        &--mt20 {
+            margin-top: 2rem;
+        }
+
+        &--hl {
+            font-weight: 700;
+            background: $satin;
+        }
+    }
+}

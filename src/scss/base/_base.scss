@@ -1,0 +1,122 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body {
+    box-sizing: border-box;
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $main;
+    color: $white;
+}
+
+
+
+/* The container must be positioned relative: */
+
+.bg-img-wr {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    text-align: right;
+    right: 0;
+    z-index: -1;
+    .bg-image {
+        top: 0;
+        right: 0;
+        width: 90vw;
+        height: auto;
+        vertical-align: middle;
+    }
+}
+
+
+.error {
+    position: fixed;
+    width: 250px;
+    background: $red;
+    right: 5%;
+    border-radius: $border-radius;
+    color: #fff;
+    bottom: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: all 1s;
+    box-shadow: $shadow;
+}
+
+.pagination {
+    display: block;
+    margin-top: 1rem;
+    input {
+        max-width: 60px;
+        text-align: center;
+    }
+}
+
+/* Define css class for global loading message to cover 
+   screen during axios operations */
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    background: $main;
+    pointer-events: none;
+    color:$main !important;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    border: 0.1rem solid $white;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 0.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  
+  @keyframes lds-ripple {
+    0% {
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 3rem;
+      height: 3rem;
+      opacity: 0;
+    }
+  }
+}

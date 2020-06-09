@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700&display=swap');
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $second;
+}
+
+h1 {
+    color: $main;
+    backface-visibility: hidden;
+    margin-bottom: 1rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
+        /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+h2, h1, h3 {
+    color: $main;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    background-image: linear-gradient(to right, $main-2, $main);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+p {
+    font-size: $default-font-size;
+    color: $second;
+}
+
+a {
+    font-size: 1.3rem;
+}
+
+button {
+    font-size: $default-font-size;
+}

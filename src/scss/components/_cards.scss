@@ -1,0 +1,35 @@
+@import 'var';
+
+.cards {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .card {
+        box-shadow: $shadow;
+        background: $main;
+        color:$white;
+        flex: 0 0 24%;
+        margin-bottom: 2rem;
+        position: relative;
+        width: 5rem;
+        &:not(:last-child){
+            margin-right: 0.5rem;
+        }
+        padding: 1rem;
+        border-radius: $border-radius;
+        h1, p, h2 {
+            color: $white;
+        }
+        h2 {
+            margin-top:2rem;
+            text-align: right;
+        } 
+        span {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color:$white;
+            font-size: 1.3rem;
+        }
+    }
+}

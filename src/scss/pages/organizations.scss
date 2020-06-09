@@ -1,0 +1,100 @@
+.orgs-wrapper {
+    background:$white;
+    height:calc(100vh - (#{$header-height} + 10rem) );
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+
+    .orgs-logo{
+        width: 200px;
+        margin-bottom: 1rem;
+    }
+
+    .button-con {
+        position: relative;
+    }
+    .orgs-cg-form {
+        display: flex;
+        flex-wrap: wrap;
+        padding:2rem;
+        
+        position: absolute;
+        top:-50%;
+        
+        max-width: 60rem;
+        width: 60rem;
+        > *:not(:last-child) {
+            flex: 0 0 calc(50% - 2rem);
+        }
+    }
+
+    .orgs-container, .page-content.organizations {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        @include bp-medium {
+            justify-content: center;
+        }
+    }
+
+    @mixin org-con {
+        max-width: 300px;
+        width: 300px;
+        height: 200px;
+    }
+    .org:not(.button-con) {
+        padding: 2rem;
+         @include org-con;
+        text-align: center;
+        border: 0.1rem solid $main;
+        border-radius: $border-radius;
+        margin:2rem 0rem;
+        box-shadow: $shadow;
+        font-size: 5rem;
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 1.5rem;
+            display: block;
+            width:100%;
+        }
+        &:hover {
+            background-color: $main;
+            color:$white;
+            .orgs-del.hidden {
+                display: unset !important;
+                text-align: right;
+                position: absolute;
+                @include animation('slide-down 1s')
+                
+            }
+        }
+    }
+    .add-org-button {
+        padding: 2rem;
+        @include org-con;
+        border: 0.3rem dashed $main;
+        border-radius: $border-radius;
+        margin:2rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        &:hover {
+            color: $white;
+            svg{
+                color:$white;
+            }
+        }
+        svg {
+           font-size: 2rem;
+           margin-right:1rem; 
+           color:$main; 
+        }
+    }
+}

@@ -1,16 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/logo.svg';
+import home_picture from './assets/home_meer_klanten.png'
+import './scss/style.scss';
+import Home from './components/home';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Arthur en Harut
-        </p>
-      </header>
+      <Home />
     </div>
   );
 }

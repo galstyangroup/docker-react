@@ -1,0 +1,59 @@
+.application-wrapper {
+    margin-top:  #{$header_height};
+}
+
+.content {
+    background: $white;
+    float: left;
+    min-height: calc(100vh - (#{$header_height} + 2px));
+    max-width: calc(100% - #{$left-nav-width});
+    width: 99vw;
+    margin-left: calc(#{$left-nav-width} );
+    padding: 2rem;
+    border-bottom-left-radius: 50rem;
+}
+
+.vertical-nav {
+    min-height: calc(100vh - #{$header_height});
+    height: calc(100vh - #{$header_height});
+    border-right: 1px solid $main;
+    position: fixed;
+    overflow-y: scroll;
+    float: left;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: $left-nav-width;
+    background: $satin;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    a {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 70px;
+        height: 70px;
+        padding: 0.5rem;
+        box-shadow: $shadow;
+       
+        background: $white;
+        text-decoration: none;
+        color: $second;
+        svg {
+            margin-bottom: 2px;
+            font-size: 1.5rem;
+        }
+        &:focus {
+            color: $main;
+            border-left: 5px solid $main;
+        }
+        &:hover {
+            background: $main;
+            color: $white;
+        }
+    }
+}
